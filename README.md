@@ -1,7 +1,5 @@
 # Flask LDAP auth demo
 
----
-
 ## Installation
 
 ### Prerequisites
@@ -29,7 +27,7 @@ The project uses Docker to run the LDAP server. To install Docker use its [offic
 To use the application, you need to clone the repository to your computer. This is done using the `git clone` command. Clone the project:
 
 ```bash
->> git clone https://github.com/sergdemc/python-project-52.git && cd python-project-52
+>> git clone git@github.com:sergdemc/ldap-authentication.git && cd ldap-authentication
 ```
 
 Then you have to install all necessary dependencies:
@@ -37,8 +35,6 @@ Then you have to install all necessary dependencies:
 ```bash
 >> make install
 ```
-
----
 
 ## Usage
 
@@ -57,5 +53,3 @@ To add a new user to LDAP server use new_user.ldif file and the run command:
 ```bash
 make add-user
 ```
-
-___

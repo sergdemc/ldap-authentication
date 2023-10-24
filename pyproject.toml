@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "ldap-authentication"
+version = "0.1.0"
+description = "LDAP auth demo"
+authors = ["Sergei Demchenko <hb13718@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+ldap3 = "^2.9.1"
+flask-wtf = "^1.2.1"
+flask-sqlalchemy = "^3.1.1"
+flask-login = "^0.6.2"
+werkzeug = "2.3.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

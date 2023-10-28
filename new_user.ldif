@@ -1,11 +1,11 @@
-dn: cn=New_User,dc=example,dc=org
+dn: cn=Test_User,dc=example,dc=org
 objectClass: top
 objectClass: person
 objectClass: organizationalPerson
 objectClass: inetOrgPerson
-cn: New_User
-sn: New_User
-givenName: New
-displayName: New User
-mail: newuser@example.org
-userPassword: password
+cn: Test_User
+sn: Test_User
+givenName: Test
+displayName: Test User
+mail: testuser@example.org
+userPassword: test_password

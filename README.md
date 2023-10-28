@@ -53,3 +53,20 @@ To add a new user to LDAP server use new_user.ldif file and the run command:
 ```bash
 make add-user
 ```
+
+## Testing
+
+First run ldap server if it is not running:
+```bash
+make ldap-start
+```
+
+To run tests use:
+```bash
+make test
+```
+
+Stop the LDAP server:
+```bash
+make ldap-stop
+```

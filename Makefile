@@ -14,3 +14,7 @@ add-user:
 
 install:
 	poetry install
+
+test:
+	poetry run python -m unittest -v tests/test_auth.py && \
+	poetry run python -m unittest -v tests/test_add_user.py

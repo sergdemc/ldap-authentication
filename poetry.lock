@@ -50,6 +50,7 @@ files = [
 [package.dependencies]
 blinker = ">=1.6.2"
 click = ">=8.1.3"
+importlib-metadata = {version = ">=3.6.0", markers = "python_version < \"3.10\""}
 itsdangerous = ">=2.1.2"
 Jinja2 = ">=3.1.2"
 Werkzeug = ">=2.3.0"
@@ -87,6 +88,19 @@ files = [
 [package.dependencies]
 flask = ">=2.2.5"
 sqlalchemy = ">=2.0.16"
+
+[[package]]
+name = "flask-testing"
+version = "0.8.1"
+description = "Unit testing for Flask"
+optional = false
+python-versions = "*"
+files = [
+    {file = "Flask-Testing-0.8.1.tar.gz", hash = "sha256:0a734d7b68e63a9410b413cd7b1f96456f9a858bd09a6222d465650cc782eb01"},
+]
+
+[package.dependencies]
+Flask = "*"
 
 [[package]]
 name = "flask-wtf"
@@ -181,6 +195,25 @@ files = [
 [package.extras]
 docs = ["Sphinx"]
 test = ["objgraph", "psutil"]
+
+[[package]]
+name = "importlib-metadata"
+version = "6.8.0"
+description = "Read metadata from Python packages"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "importlib_metadata-6.8.0-py3-none-any.whl", hash = "sha256:3ebb78df84a805d7698245025b975d9d67053cd94c79245ba4b3eb694abe68bb"},
+    {file = "importlib_metadata-6.8.0.tar.gz", hash = "sha256:dbace7892d8c0c4ac1ad096662232f831d4e64f4c4545bd53016a3e9d4654743"},
+]
+
+[package.dependencies]
+zipp = ">=0.5"
+
+[package.extras]
+docs = ["furo", "jaraco.packaging (>=9)", "jaraco.tidelift (>=1.4)", "rst.linker (>=1.9)", "sphinx (>=3.5)", "sphinx-lint"]
+perf = ["ipython"]
+testing = ["flufl.flake8", "importlib-resources (>=1.3)", "packaging", "pyfakefs", "pytest (>=6)", "pytest-black (>=0.3.7)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-mypy (>=0.9.1)", "pytest-perf (>=0.9.2)", "pytest-ruff"]
 
 [[package]]
 name = "itsdangerous"
@@ -435,7 +468,22 @@ markupsafe = "*"
 [package.extras]
 email = ["email-validator"]
 
+[[package]]
+name = "zipp"
+version = "3.17.0"
+description = "Backport of pathlib-compatible object wrapper for zip files"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "zipp-3.17.0-py3-none-any.whl", hash = "sha256:0e923e726174922dce09c53c59ad483ff7bbb8e572e00c7f7c46b88556409f31"},
+    {file = "zipp-3.17.0.tar.gz", hash = "sha256:84e64a1c28cf7e91ed2078bb8cc8c259cb19b76942096c8d7b84947690cabaf0"},
+]
+
+[package.extras]
+docs = ["furo", "jaraco.packaging (>=9.3)", "jaraco.tidelift (>=1.4)", "rst.linker (>=1.9)", "sphinx (<7.2.5)", "sphinx (>=3.5)", "sphinx-lint"]
+testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "pytest (>=6)", "pytest-black (>=0.3.7)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-ignore-flaky", "pytest-mypy (>=0.9.1)", "pytest-ruff"]
+
 [metadata]
 lock-version = "2.0"
-python-versions = "^3.10"
-content-hash = "dcc12c4d4e283c79e75e086889ba0c1a3ecb74ea50c75f511a3d3ecbe6acd123"
+python-versions = "^3.8"
+content-hash = "c3dfd27e821472ea8dadc88fe1eeb0ce2ffbb98e73c1c7a5c39c8301c5ad6eaa"

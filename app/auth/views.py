@@ -2,10 +2,10 @@ from flask import (request, render_template, flash, redirect, url_for,
                    Blueprint, g)
 from flask_login import (current_user, login_user, logout_user, login_required)
 from app import login_manager, db
+from app.auth.models import User, LoginForm
+
 
 auth = Blueprint('auth', __name__)
-
-from app.auth.models import User, LoginForm
 
 
 @login_manager.user_loader
@@ -59,4 +59,5 @@ def login():
 @login_required
 def logout():
     logout_user()
+    flash('You have successfully logged out.', 'success')
     return redirect(url_for('auth.home'))

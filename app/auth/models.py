@@ -5,12 +5,6 @@ from wtforms import validators
 from app import db, app
 
 
-# def get_ldap_connection():
-#     server = Server(app.config['LDAP_PROVIDER_URL'], get_info=ALL)
-#     conn = Connection(server, auto_bind=True)
-#     return conn
-
-
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(100))
@@ -21,9 +15,9 @@ class User(db.Model):
     @staticmethod
     def try_login(username, password):
         server = Server(app.config['LDAP_PROVIDER_URL'], get_info=ALL)
-        Connection(server,
-                   user=f'cn={username},dc=example,dc=org',
-                   password=password)
+        with Connection(server, user=f'cn={username},dc=example,dc=org', password=password) as conn:
+            if not conn.bind():
+                raise Exception("LDAP authentication failed")
 
     def is_authenticated(self):
         return True
